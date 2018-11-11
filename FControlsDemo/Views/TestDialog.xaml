@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv:FDialog xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FControlsDemo.Views.TestDialog" xmlns:cv="clr-namespace:FControls.Form;assembly=FControls.Form">
+    <StackLayout BackgroundColor="Red" Padding="10">
+        <Label Text="Huy"></Label>
+    </StackLayout>
+</cv:FDialog>

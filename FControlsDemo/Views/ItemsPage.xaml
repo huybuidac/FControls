@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="FControlsDemo.Views.ItemsPage" Title="{Binding Title}" x:Name="BrowseItemsPage" xmlns:cv="clr-namespace:FControls.Form;assembly=FControls.Form">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <cv:ViewPagerControl Grid.Row="0" x:Name="viewpager" VerticalOptions="FillAndExpand" Position="{Binding Position, Mode=TwoWay}" ItemsSource="{Binding ListItems}" Infinite="false">
+                <cv:ViewPagerControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="Olive" Padding="10">
+                            <StackLayout BackgroundColor="Red" VerticalOptions="FillAndExpand">
+                                <Label Text="{Binding .}" FontSize="30" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="Yellow" />
+                            </StackLayout>
+                        </StackLayout>
+                    </DataTemplate>
+                </cv:ViewPagerControl.ItemTemplate>
+            </cv:ViewPagerControl>
+            <StackLayout Grid.Row="1">
+                <Button Text="Add" Clicked="Handle_Add"/>
+                <Button Text="Delete" Clicked="Handle_Delete"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
